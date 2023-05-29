@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["zeusina <kachusov_k@outlook.com>"]
 readme = "README.md"
-packages = [{include = "telegram_gpt_bot"}]
+packages = [{include = "src/"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -18,8 +18,3 @@ pyyaml = "^6.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[package]
-packages = [
-    { include = "telegram-gpt-bot"}
-]
