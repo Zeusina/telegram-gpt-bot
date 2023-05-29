@@ -2,9 +2,9 @@ import logging
 from colorama import init, Fore
 
 
-def configurate_logging():
+def configurate_logging(level: int = 50):
     init()
-    logging.basicConfig(level=logging.DEBUG,
+    logging.basicConfig(level=level,
                         format=Fore.BLACK + "%(asctime)s" + Fore.CYAN + " %(levelname)s      "
                                + Fore.RED + "%(name)s-%(funcName)s" + " %(message)s")
 
