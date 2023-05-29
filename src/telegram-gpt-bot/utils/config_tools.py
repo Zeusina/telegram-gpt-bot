@@ -1,4 +1,5 @@
 from . import logging_tools
+import sys
 import os
 import pathlib
 
@@ -8,15 +9,16 @@ import yaml
 class Config:
     def __init__(self):
         self.logger = logging_tools.get_logger("config")
-        config_path = pathlib.Path(os.curdir).absolute().parent.joinpath("config.yaml")
+        config_path = pathlib.Path(sys.path[0]).absolute().parent.parent.joinpath("config.yaml")
         self.logger.info("Search config file in: " + str(config_path))
         if os.path.exists(config_path):
             self.logger.info("Start parsing config file...")
             with open(config_path) as f:
-                self.config: dict = yaml.load(f, Loader=yaml.FullLoader)
+                config: dict = yaml.load(f, Loader=yaml.FullLoader)
+                self.config = config
                 self.logger.debug(self.config)
         else:
-            self.logger.warning("Config file not found")
+            self.logger.warning("Config file not found\nFind in: " + str(config_path))
             self.logger.info("Using default config...")
 
     def get_log_level(self) -> int:
