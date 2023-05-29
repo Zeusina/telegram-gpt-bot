@@ -1,15 +1,20 @@
-from utils import get_env_from_file, configurate_logging
+import logging
+
+from utils import env_tools, logging_tools
 import asyncio
 from telegram import bot
 
 
 async def main():
-    configurate_logging.configurate_logging()
-    get_env_from_file.get_env_from_file()
+    logging_tools.configurate_logging()
+    env_tools.get_env_from_file()
+    telegram_stuff = await bot.setup_bot()
+    await bot.start_polling(telegram_stuff)
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
-    telegram_stuff = asyncio.run(bot.setup_bot())
-    asyncio.run(bot.start_polling(telegram_stuff))
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        logging.error("Bot was stopped by user")
 
