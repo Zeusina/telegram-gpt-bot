@@ -1,12 +1,13 @@
 import logging
 
-from utils import env_tools, logging_tools
+from utils import env_tools, logging_tools, config_tools
 import asyncio
 from telegram import bot
 
 
 async def main():
-    logging_tools.configurate_logging()
+    config = config_tools.Config()
+    logging_tools.configurate_logging(level=config.get_log_level())
     env_tools.get_env_from_file()
     telegram_stuff = await bot.setup_bot()
     await bot.start_polling(telegram_stuff)
