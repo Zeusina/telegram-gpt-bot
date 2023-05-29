@@ -2,7 +2,7 @@ import sys
 import os
 import pathlib
 import dotenv
-from logging_tools import get_logger
+from .logging_tools import get_logger
 
 
 def get_env_from_file():
