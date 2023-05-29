@@ -12,4 +12,4 @@ def get_env_from_file():
         logger.debug("Loading dotenv file: " + str(dotenv_path))
         dotenv.load_dotenv(dotenv_path=dotenv_path)
     else:
-        logger.error("Dotenv file not found in:" + str(dotenv_path))
+        logger.warning("Dotenv file not found in:" + str(dotenv_path))
