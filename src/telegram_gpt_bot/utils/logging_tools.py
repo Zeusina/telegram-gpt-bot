@@ -1,5 +1,6 @@
 import logging
 from colorama import init, Fore
+from src.telegram_gpt_bot.utils.config_tools import Config
 
 
 def configurate_logging(level: int = 50):
@@ -9,8 +10,9 @@ def configurate_logging(level: int = 50):
                                + Fore.RED + "%(name)s - %(funcName)s" + " %(message)s")
 
 
-def get_logger(name: str = __name__, level: int = logging.DEBUG) -> logging.Logger:
+def get_logger(name: str = __name__, level: int = logging.CRITICAL) -> logging.Logger:
+    config = Config()
     logger = logging.getLogger(name)
-    logger.setLevel(level)
+    logger.setLevel(config.get_log_level())
     return logger
 
