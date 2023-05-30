@@ -1,6 +1,6 @@
 import logging
 import os
-from ..utils.logging_tools import get_logger
+from src.telegram_gpt_bot.utils.logging_tools import get_logger
 from aiogram import Bot, Dispatcher
 from src.telegram_gpt_bot.telegram.handlers.commands import register_user_commands, commands
 from aiogram.types import BotCommand
