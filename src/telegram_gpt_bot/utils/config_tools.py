@@ -1,4 +1,4 @@
-from . import logging_tools
+from logging import getLogger
 import sys
 import os
 import pathlib
@@ -13,7 +13,7 @@ class Config:
         return cls.instance
 
     def __init__(self):
-        self.logger = logging_tools.get_logger("config")
+        self.logger = getLogger("utils/config")
         config_path = pathlib.Path(sys.path[0]).absolute().parent.parent.joinpath("config.yaml")
         self.logger.info("Search config file in: " + str(config_path))
         if os.path.exists(config_path):
