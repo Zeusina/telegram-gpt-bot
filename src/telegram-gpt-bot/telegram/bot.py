@@ -1,14 +1,12 @@
-import logging
 import os
-from typing import Tuple
 
-import aiogram.client.bot
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher
 
 
 async def setup_bot() -> tuple[Bot, Dispatcher]:
     bot = Bot(os.getenv("TELEGRAM_TOKEN"))
     dp = Dispatcher()
+
     return bot, dp
 
 
