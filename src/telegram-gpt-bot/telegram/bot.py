@@ -1,12 +1,13 @@
 import os
 
 from aiogram import Bot, Dispatcher
+from .handlers.commands import register_user_commands
 
 
 async def setup_bot() -> tuple[Bot, Dispatcher]:
     bot = Bot(os.getenv("TELEGRAM_TOKEN"))
     dp = Dispatcher()
-
+    register_user_commands(dp)
     return bot, dp
 
 
