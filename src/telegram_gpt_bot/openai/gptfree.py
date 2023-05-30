@@ -1,10 +1,10 @@
 import gpt4free
 from gpt4free import Provider
-import logging
+from src.telegram_gpt_bot.utils.logging_tools import get_logger
 
 
 async def request_to_gpt(promt: str) -> str:
-    logging.basicConfig(level=logging.DEBUG)
+    logger = get_logger("openai/gptfree")
 
     # usage You
     response = bytes(
