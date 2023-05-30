@@ -7,6 +7,11 @@ import yaml
 
 
 class Config:
+    def __new__(cls):
+        if not hasattr(cls, 'instance'):
+            cls.instance = super(Config, cls).__new__(cls)
+        return cls.instance
+
     def __init__(self):
         self.logger = logging_tools.get_logger("config")
         config_path = pathlib.Path(sys.path[0]).absolute().parent.parent.joinpath("config.yaml")
