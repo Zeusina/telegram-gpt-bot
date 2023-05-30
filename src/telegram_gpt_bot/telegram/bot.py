@@ -1,7 +1,7 @@
 import os
 
 from aiogram import Bot, Dispatcher
-from .handlers.commands import register_user_commands
+from src.telegram_gpt_bot.telegram.handlers.commands import register_user_commands
 
 
 async def setup_bot() -> tuple[Bot, Dispatcher]:
