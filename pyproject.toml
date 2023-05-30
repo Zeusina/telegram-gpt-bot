@@ -8,11 +8,11 @@ packages = [{include = "src/"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-openai = "^0.27.7"
 aiogram = {url = "https://github.com/aiogram/aiogram/archive/refs/heads/dev-3.x.zip"}
 python-dotenv = "^1.0.0"
 colorama = "^0.4.6"
 pyyaml = "^6.0"
+gpt4free = "^1.0.2"
 
 
 [build-system]
