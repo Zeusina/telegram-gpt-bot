@@ -1,5 +1,7 @@
-import gpt4free
-from gpt4free import Provider
+
+from src.telegram_gpt_bot.openai.gpt4free import Provider
+
+from src.telegram_gpt_bot.openai import gpt4free
 from src.telegram_gpt_bot.utils.logging_tools import get_logger
 
 
