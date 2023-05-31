@@ -6,7 +6,7 @@ from telegram import bot
 
 
 async def main():
-    config = config_tools.Config()
+    config = config_tools.Config().get_instance()
     logging_tools.configurate_logging(level=config.get_log_level())
     env_tools.get_env_from_file()
     telegram_stuff = await bot.setup_bot()

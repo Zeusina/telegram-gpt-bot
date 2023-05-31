@@ -11,7 +11,7 @@ def configurate_logging(level: int = 50):
 
 
 def get_logger(name: str = __name__, level: int = logging.CRITICAL) -> logging.Logger:
-    config = Config()
+    config = Config.get_instance()
     logger = logging.getLogger(name)
     logger.setLevel(config.get_log_level())
     return logger

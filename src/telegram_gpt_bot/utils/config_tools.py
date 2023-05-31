@@ -7,6 +7,13 @@ import yaml
 
 
 class Config:
+
+    @staticmethod
+    def get_instance():
+        if '_instance' not in Config.__dict__:
+            Config._instance = Config()
+        return Config._instance
+
     def __new__(cls):
         if not hasattr(cls, 'instance'):
             cls.instance = super(Config, cls).__new__(cls)
