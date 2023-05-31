@@ -1,6 +1,6 @@
 from enum import Enum
 
-from gpt4free import you
+from src.telegram_gpt_bot.openai.gpt4free import you
 
 
 class Provider(Enum):
