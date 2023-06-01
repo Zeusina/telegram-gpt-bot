@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "telegram_gpt_bot"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = ["zeusina <kachusov_k@outlook.com>"]
 readme = "README.md"
