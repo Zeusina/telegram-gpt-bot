@@ -36,27 +36,27 @@
       <h3>Используемые технологии</h3>
       <ul>
          <li>
-            <p>python-3.10</p>
+            <p>python-3.10🐍</p>
             <p>
             <h4>Библиотеки python</h4>
             </p>
             <ul>
                <li>
-                  <p>aiogram</p>
+                  <p>aiogram🌎</p>
                </li>
                <li>
-                  <p>gpt4free</p>
+                  <p>gpt4free🤖</p>
+               </li>
+               <li>
+                  <p>python-dotenv📝</p>
                </li>
             </ul>
          </li>
          <li>
-            <p>python-dotenv</p>
+            <p>poetry🗄️</p>
          </li>
          <li>
-            <p>poetry</p>
-         </li>
-         <li>
-            <p>docker</p>
+            <p>docker📦</p>
          </li>
       </ul>
    </div>
