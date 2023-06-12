@@ -36,8 +36,3 @@
       </ul>
    </div>
 </div>
-<style>
-   #description {
-      background-color: aqua;
-   }
-</style>
