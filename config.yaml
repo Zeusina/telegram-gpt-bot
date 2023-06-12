@@ -1,2 +1,2 @@
 logging:
-  level: WARN
+  level: DEBUG
