@@ -14,4 +14,4 @@ async def ai_command(message: Message, command: CommandObject):
         await sent_message.edit_text(ai_response)
     else:
         logger.debug("Get ai request without argument from user: " + message.chat.full_name or message.chat.username)
-        await message.answer("Этот текст еще не написан")
+        await message.answer("Вы не передали запрос нейросети. Команда должна выглядеть так:\n/ai (Ваш запрос)")
