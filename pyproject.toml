@@ -14,11 +14,9 @@ python = "^3.10"
 python-dotenv = "^1.0.0"
 colorama = "^0.4.6"
 pyyaml = "^6.0"
-retrying = "^1.3.4"
 aiogram = {version = "^3.0.0b7", allow-prereleases = true}
-fake-useragent = "^1.1.3"
-requests = "^2.29.0"
-tls-client = "^0.2"
+g4f = "^0.0.1.3"
+
 
 
 [build-system]
